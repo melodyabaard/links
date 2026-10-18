@@ -12,15 +12,16 @@
 *{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif}
 body{min-height:100vh;background:radial-gradient(120% 60% at 50% 0%,#1a1a1c 0%,#0b0b0c 60%)}
 body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-main{max-width:440px;margin:0 auto;padding:44px 22px 56px;text-align:center;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center}
-main>*{flex-shrink:0}
-@media(min-width:768px){main{max-width:460px;padding:56px 24px}.cover{max-width:180px!important;margin-bottom:36px!important}h1{font-size:2.35rem}.sub{margin-bottom:20px}}
-h1{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:2.7rem;letter-spacing:.06em;margin:0 0 4px;font-style:normal;color:var(--fg)}
+main{--s:22px;max-width:520px;margin:0 auto;padding:var(--s) 12px;text-align:center;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center}
+main>*{flex-shrink:0}main>a.btn:last-of-type{margin-bottom:0}
+main>a.btn,main>.cover{width:calc(100% - 56px);max-width:340px;margin-left:auto;margin-right:auto}
+@media(min-width:768px){main{--s:24px;max-width:540px}main>a.btn{max-width:400px}}
+h1{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:clamp(2.2rem,12.4vw,4.4rem);line-height:1.05;white-space:nowrap;letter-spacing:.04em;margin:0 0 calc(var(--s)*.5);font-style:normal;color:var(--fg)}
 @supports((-webkit-background-clip:text) or (background-clip:text)){h1{background-image:radial-gradient(circle at 20% 30%,#fff 0 .6px,transparent 1.1px),radial-gradient(circle at 70% 60%,rgba(255,255,255,.95) 0 .5px,transparent 1px),radial-gradient(circle at 45% 85%,rgba(255,255,255,.8) 0 .4px,transparent .9px),radial-gradient(circle at 85% 15%,rgba(255,255,255,.9) 0 .45px,transparent .9px),linear-gradient(180deg,#d9d4ca 0%,#a59e92 55%,#7d776d 100%);background-size:11px 13px,17px 11px,13px 19px,23px 17px,100% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}}
 h1{-webkit-text-stroke:1.1px rgba(225,218,204,.7);paint-order:stroke fill}
-.sub{color:var(--mute);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin:0 0 28px}
-.cover{display:block;margin:0 auto 48px;width:52%;max-width:210px;height:auto;border-radius:3px;box-shadow:0 18px 50px rgba(0,0,0,.7);filter:saturate(.85) brightness(.92)}
-a.btn{display:block;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.82rem !important;letter-spacing:.08em !important;padding:15px 18px;margin:0 0 12px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.03);color:var(--fg);text-decoration:none;font-size:.95rem;letter-spacing:.02em;transition:.2s}
+.sub{color:var(--mute);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin:0 0 var(--s)}
+.cover{display:block;margin-top:0;margin-bottom:var(--s);width:52%!important;max-width:200px!important;height:auto;border-radius:3px;box-shadow:0 18px 50px rgba(0,0,0,.7);filter:saturate(.85) brightness(.92)}
+a.btn{display:block;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.82rem !important;letter-spacing:.08em !important;padding:15px 18px;margin-top:0;margin-bottom:calc(var(--s)*.5);border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.03);color:var(--fg);text-decoration:none;font-size:.95rem;letter-spacing:.02em;transition:.2s}
 a.btn:hover{background:rgba(255,255,255,.08);border-color:#4a4a4c}
 footer{margin-top:34px;color:#55534f;font-size:.72rem}
 </style></head><body><main>
@@ -36,7 +37,6 @@ footer{margin-top:34px;color:#55534f;font-size:.72rem}
 <a class="btn" href="https://www.tiktok.com/@mlardalan" data-goatcounter-click="btn-tiktok" data-goatcounter-title="TikTok">TikTok</a>
 <a class="btn" href="https://www.instagram.com/mlardalan" data-goatcounter-click="btn-instagram" data-goatcounter-title="Instagram">Instagram</a>
 <a class="btn" href="https://letters-from-m-l-ardalan.kit.com/ae26afd5de" data-goatcounter-click="btn-join-the-newsletter" data-goatcounter-title="Join the newsletter">Join the newsletter</a>
-</main><!-- Analytics (GoatCounter, free, no cookies). Replace YOURCODE with the GoatCounter site code, then remove the comment markers.
+</main>
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "5a70d543d56444129d535f59d2094172"}'></script><!-- End Cloudflare Web Analytics -->
--->
 </body></html>
